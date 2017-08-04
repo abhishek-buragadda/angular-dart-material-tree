@@ -1,0 +1,13 @@
+{
+  "ngDeps": null,
+  "type": {
+    "MultiSelectTreeNode": {
+      "class": "Identifier",
+      "name": "MultiSelectTreeNode",
+      "moduleUrl": "asset:angular_dart_material_tree/lib/src/multi_select_tree/model/multi_select_tree_model.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

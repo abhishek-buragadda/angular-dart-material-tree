@@ -1,0 +1,13 @@
+{
+  "ngDeps": null,
+  "type": {
+    "TreeNode": {
+      "class": "Identifier",
+      "name": "TreeNode",
+      "moduleUrl": "asset:angular_dart_material_tree/lib/src/material-tree/model/tree_model.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

@@ -1,0 +1,160 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "dart:async",
+        "5": false
+      },
+      {
+        "1": "package:angular2/angular2.dart",
+        "5": false
+      },
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      },
+      {
+        "1": "package:angular_components/angular_components.dart",
+        "5": false
+      },
+      {
+        "1": "package:polymer/polymer.dart",
+        "5": false
+      },
+      {
+        "1": "package:polymer_elements/iron_icons.dart",
+        "5": false
+      },
+      {
+        "1": "package:polymer_elements/editor_icons.dart",
+        "5": false
+      },
+      {
+        "1": "../model/multi_select_tree_model.dart",
+        "5": false
+      },
+      {
+        "1": "../service/tree_service.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "TreeNodeComponent",
+        "5": [
+          {
+            "1": "TreeService",
+            "4": "_treeService"
+          }
+        ],
+        "6": [
+          "OnInit"
+        ],
+        "7": [
+          {
+            "2": "materialDirectives"
+          },
+          {
+            "2": "COMMON_DIRECTIVES"
+          },
+          {
+            "2": "TreeNodeComponent"
+          }
+        ]
+      }
+    ],
+    "6": "multi_select_tree_node.dart",
+    "7": [
+      {
+        "1": "package:angular2/angular2.template.dart",
+        "4": "i0"
+      },
+      {
+        "1": "package:angular2/core.template.dart",
+        "4": "i1"
+      },
+      {
+        "1": "package:angular_components/angular_components.template.dart",
+        "4": "i2"
+      },
+      {
+        "1": "../model/multi_select_tree_model.template.dart",
+        "4": "i3"
+      },
+      {
+        "1": "../service/tree_service.template.dart",
+        "4": "i4"
+      }
+    ]
+  },
+  "type": {
+    "TreeNodeComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "tree-node",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "TreeNodeComponent",
+        "moduleUrl": "asset:angular_dart_material_tree/lib/src/multi_select_tree/multi_select_tree_node/multi_select_tree_node.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "TreeService",
+                "moduleUrl": "asset:angular_dart_material_tree/lib/src/multi_select_tree/service/tree_service.dart",
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "node": "node",
+        "parent": "parent"
+      },
+      "inputTypes": {
+        "node": " MultiSelectTreeNode",
+        "parent": " MultiSelectTreeNode"
+      },
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [
+        0
+      ],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div class=\"node\">\n    <iron-icon class=\"small animate\" [class.leaf-node]=\"node.isLeafNode()\" (click)=\"expandNode(node)\"\n               [class.expanded]=\"node.showChildren\"\n               icon=\"icons:chevron-right\"></iron-icon>\n    <material-checkbox [indeterminate]=\"node.isIndeterminate\" class=\"tree-checkbox\"\n                       (indeterminateChange)=\"handleIndeterminate(node,parent,$event)\"\n                       (checkedChange)=\"selectNode(node,parent,$event)\" [(ngModel)]=\"node.isSelected\">\n    </material-checkbox>\n    <iron-icon class=\"small\" [class.hidden]=\"node.children.length ==0\" icon=\"icons:folder\"></iron-icon>\n    <iron-icon class=\"small\" [class.hidden]=\"node.children.length!=0 \" icon=\"editor:insert-drive-file\"></iron-icon>\n\n    <div class=\"node-name\" [class.selected]=\"node.isSelected\" (click)=\"expandNode(node)\">{{node.name}}</div>\n</div>\n<div [class.hidden]=\"!node.showChildren\" class=\"child\">\n    <div *ngFor=\"let child of node.getChildren()\">\n        <tree-node [node]=\"child\" [parent]=\"node\"></tree-node>\n    </div>\n</div>\n",
+        "templateUrl": "asset:angular_dart_material_tree/lib/src/multi_select_tree/multi_select_tree_node/multi_select_tree_node.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:angular_dart_material_tree/lib/src/multi_select_tree/multi_select_tree_node/multi_select_tree_node.css"
+        ],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}
