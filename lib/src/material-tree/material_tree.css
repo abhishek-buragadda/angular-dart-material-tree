@@ -1,0 +1,9 @@
+.tree-container{
+
+    border : 1px solid #B9AFAF;
+    height: 200px;
+    overflow-y: scroll;
+    min-height: 100px;
+    width: 400px;
+
+}

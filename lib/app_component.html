@@ -1,0 +1,26 @@
+<h3>Angular Dart Material Tree</h3>
+
+
+<h4> Tree</h4>
+<div>
+    Node clicked : {{selectedNode}}
+</div>
+<br><br>
+<custom-material-tree (nodeSelected)="nodeSelected($event)" [data]="treeRootNodes" >
+
+</custom-material-tree>
+
+
+<br><br><br>
+<h4>Multi select tree </h4>
+<div>
+    Selected Nodes :
+    <span *ngFor="let node of selectedNodes">
+        {{node}}
+    </span>
+</div>
+<br><br>
+
+<multi-select-tree [data]="treeRootNodes"   (selectedNodes)="nodesSelected($event)" >
+
+</multi-select-tree>
