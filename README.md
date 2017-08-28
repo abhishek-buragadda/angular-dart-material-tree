@@ -1,4 +1,4 @@
-# angular-dart-data-grid
+# angular_dart_material_tree
 
 [demo](https://abhishek-buragadda.github.io/angular-dart-material-tree/)
 
