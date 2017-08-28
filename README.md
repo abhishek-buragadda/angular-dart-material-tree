@@ -31,8 +31,9 @@ dependencies :
 ### Installing
 
 Update you pubspec.yaml file to include the above dependencies . 
+Include multi_select_tree dependency in the pub-spec.yaml file. 
 
-Copy the material-tree/multi-select-tree folder into your lib .
+  multi_select_tree: "^1.0.0"
 
 Include the material-tree/multi-select-tree in the imports .
 ```
